@@ -5,9 +5,52 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-1.11.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title></title>
+  <title>Expense Tracker</title>
   </head>
   <body>
-    
+    <div class="container">
+      <h1>Expense Tracker</h1>
+
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Show Categories -->
+          <div id="categories">
+            <h2>Categories</h2>
+            <ul class="categories">
+
+            </ul>
+            <!-- New Category Form -->
+            <form id="new-category-form">
+              <div class="form-group">
+                <input type="text" id="new-category" value="New Category" />
+                <button type="submit" id="submit-category" class="btn">Add!</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div id="purchases">
+            <h2>Add purchase to <span class="purchased-category"></span></h2>
+            <form id="new-purchase-form">
+              <input type="text" id="new-description" value="Description" />
+              <input type="text" id="new-amount" value="Amount" />
+              <input type="hidden" name="category" value="" />
+              <button type="submit" id="submit-purchase" class="btn">Add!</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div id="category-itemized-list">
+            <h2></h2>
+            <table>
+              <tr>
+                <th><h4>Description</h4></th><th><h4>Amount</h4></th>
+              </tr>
+            </table>
+          </div>
+        </div>  
+
   </body>
 </html>
